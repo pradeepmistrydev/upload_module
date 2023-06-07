@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="main">
+    <div class="login">
+      <h2>Member Login</h2>
+      <form name="form" onsubmit="successmsg()" id="form" action="">
+        <div class="login-form">
+          <div class="username">
+            <input type="text" id="text_username" placeholder="Email Id"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              title="Email atleast 8 or more characters Ex. xyz@gmail.com" required />
+          </div>
+          <div class="password">
+            <input type="password" id="text_password" placeholder="Password"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"
+              title="Password must be atleast 6 or more characters Ex. Admin@865" required />
+            <img src="img/eye.png" alt="password_eye" class="password_eye">
+          </div>
+          <div class="submit_block">
+            <input type="submit" class="btn_submit" id="btn_submit" value="Submit">
+          </div>
+          <p id="successMessage" class="success_msg">Successfully Login</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>
+
+</html>
